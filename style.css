@@ -1,0 +1,584 @@
+:root {
+  --pink: #B0214D;
+  --light: #FAF4F6;
+  --shadow-top: 0 -.1rem .2rem -.2rem var(--pink);
+  --shadow-bottom: 0 .1rem .2rem -.2rem var(--pink);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background-color: var(--light);
+  font-family: 'Nunito Sans', sans-serif;
+  line-height: 1.5rem;
+}
+main {
+  margin-bottom: 2rem;
+}
+a {
+  text-decoration: none;
+}
+h1, h2, h3, h4, header {
+  font-family: 'Kalam', cursive;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  margin: 2.5rem 0 1.5rem;
+}
+h3 {
+  margin: 3rem 0 1rem;
+}
+ul {
+  list-style: none; 
+}
+img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-shadow: var(--shadow-top),
+              var(--shadow-bottom);
+}
+td {
+  padding: 0 1rem;
+}
+iframe {
+  margin-bottom: 1.5rem;
+  border: 0;
+}
+
+/* header */
+header {
+  padding-top: 1.2rem;
+}
+header h1 {
+  margin-left: 1.6rem;
+}
+.header-content, .header-content a {
+  transition: .6s;
+  color: var(--pink);
+}
+.header-content {
+  text-align: center;
+}
+.header-content .menu-open {
+  position: absolute;
+  left: 1rem;
+  top: .9rem;
+  display: inline-block;
+}
+.menu {
+  width: 13rem;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: -15rem;
+  background-color: var(--pink);
+  opacity: .9;
+  padding-top: 2rem;
+  transition: margin-left .6s;
+}
+.menu .menu-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: var(--light);
+}
+.menu .languages {
+  padding: 0;
+}
+.menu .languages > * {
+  margin-left: 1rem;
+  padding: .3rem .2rem 0 .2rem;
+}
+.menu .languages > a {
+  display: inline-block;
+}
+.menu ul {
+  padding: 2rem 0;
+}
+.facebook {
+  text-align: center;
+}
+.menu a {
+  font-size: 1.2rem;
+  color: var(--light);
+  display: block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
+.menu a:hover, .menu .languages img:hover, .menu .menu-close:hover, .home .mob-icon:hover {
+  color: var(--pink);
+  background-color: var(--light);
+  transition: 1s;
+}
+.menu .languages img:hover, .menu .menu-close:hover, .home .mob-icon:hover {
+  border-radius: .2rem;
+}
+
+/* dropdown menu */
+.menu .dropdown {
+  position: relative;
+}
+.menu .submenu {
+  position: absolute;
+  opacity: 0;
+  display: none;
+}
+.menu .submenu a {
+  padding: 1rem;
+}
+.menu .dropdown:hover > .submenu {
+  opacity: 1;
+}
+
+/* index page header */
+.home {
+  position: relative;
+  height: 30rem;
+}
+.home .header-content {
+  display: grid;
+  justify-items: center;
+  transition: .6s;
+}
+.home .header-content > * {
+  margin: 1.5rem;
+  padding: .4rem .7rem;
+  text-align: center;
+  color: var(--light);
+  display: block;
+  padding-top: .6rem;
+}
+.home .mob-icon:hover, .home .mob-icon a:hover {
+  color: var(--pink);
+}
+.home .header-content p, .home .header-content .facebook {
+  display: block;
+  text-transform: uppercase;
+}
+.home .header-content .menu-open {
+  position: static;
+}
+.home .mob-icon {
+  border: .0625rem solid var(--light);
+  border-radius: .2rem;
+  background: rgba(169,41,83,0.3);
+  box-shadow: var(--shadow-bottom);
+}
+.home .mob-icon a {
+    color: var(--light);
+}
+.home .home-img {
+  background-image: url("images/baska.jpg");
+  background-size: cover;
+  background-position: 80% 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.home .menu {
+  height: 30rem;
+}
+
+/* apartments */
+figure {
+  margin: 1.2rem auto .5rem;
+  text-align: center;
+}
+.facilities table {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.facilities td:last-child { 
+  text-align: center;
+}
+.price-list table {
+  width: 100%;
+}
+.price-list tr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: .7rem;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem 0;
+  box-shadow: var(--shadow-bottom);
+}
+.price-list .studio tr {
+  grid-template-columns: repeat(2, 1fr);
+}
+.price-list th, .price-list td:first-child {
+  font-style: italic;
+}
+.price-list .star {
+  color: var(--pink);
+}
+.price-list td { 
+  font-size: .9rem;
+}
+.price-list td:first-child { 
+  font-weight: bold;
+}
+.price-info {
+  text-align: center;
+  margin-top: 3rem;
+}
+.reservation-policy {
+  padding-bottom: 1.5rem;
+}
+
+/* location */
+.location a {
+  color: var(--pink);
+}
+
+/* baska */
+.baska-info {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+}
+.baska .beaches {
+  margin-top: 2.5rem;
+}
+.baska-info img {
+  margin: 1rem 0;
+}
+.baska h3 {
+  margin: 0;
+  padding: 1rem 0;
+}
+.close-button {
+  display: none;
+}
+.beaches .close-button {
+  display: inline-block;
+}
+.beaches .open-button {
+  display: none;
+}
+.baska-info .info-text {
+  grid-column: 1 / -1;
+  display: none;
+  margin-bottom: 1.5rem;
+}
+.beaches .info-text {
+  display: block;
+}
+.baska-info .close-button, .baska-info .open-button {
+  color: var(--pink);
+  padding: 1rem;
+}
+
+/* gallery */
+.gallery-container {
+  margin: 2rem 0;
+}
+.main-img {
+  margin: 1rem 0;
+}
+.gallery-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-gap: .3rem;
+}
+.studio-kitchen  {
+  max-width: 37.5rem;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+.main-img .studio-kitchen {
+  display: block; 
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: .6;
+  animation: fadeIn 0.7s ease-in 1 forwards;
+}
+.apartment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* contact */
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+label {
+  margin-top: 1rem;
+}
+input, textarea {
+  line-height: 2rem;
+  background: transparent;
+  font-family: 'Nunito Sans', sans-serif;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  padding: .3rem .5rem;
+  border: .0625rem solid #666;
+}
+textarea {
+  height: 7rem;
+  margin-bottom: 1rem;
+}
+input[type=submit] {
+  color: var(--light);
+  background: var(--pink);
+  border: none;
+  margin-top: 1.2rem;
+}
+input:focus, textarea:visited{
+  outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 60rem --light;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.error-msg, .success-msg {
+  color: var(--pink);
+  font-style: italic;
+}
+.error-msg, .success-msg {
+  margin-bottom: 2rem;
+}
+.success-msg {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-bottom);
+}
+.contact-info {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.fa-map-marked-alt, .fa-envelope, .fa-phone {
+  margin-right: .5rem;
+}
+
+/* footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "address address"
+                       "map map"
+                       "contact facebook";
+  grid-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  font-size: .9rem;
+  color: var(--pink);
+  background-color: rgba(176,33,77,.02);
+  box-shadow: var(--shadow-top);
+}
+.footer-address {
+  grid-area: address;
+}
+.footer-map {
+  grid-area: map;
+  justify-self: stretch;
+}
+.footer-contact {
+  grid-area: contact;
+  box-shadow: var(--shadow-top),
+              var(--shadow-bottom);
+  padding: .5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.footer-facebook {
+  grid-area: facebook;
+  margin-bottom: 1rem;
+}
+footer h3 {
+  margin: 1.5rem 0 0;
+}
+footer iframe {
+  margin-bottom: 0;
+}
+footer article a {
+  color: var(--pink);
+}
+
+@media (min-width: 48rem) {
+  body {
+    padding: 0 2rem;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 1rem 0 0;
+    opacity: 1;
+    padding: .7rem 0 .4rem;
+  }
+  .facebook {
+    display: none;
+  }
+  .menu ul {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-items: center;
+    align-items: center;
+    padding: .1rem;
+    margin: 0;
+  }
+  .menu a {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0;
+  }
+  .menu a:hover {
+    text-shadow: .0625rem .0625rem .0625rem var(--light), -.0625rem -.0625rem .0625rem var(--light), .0625rem -.0625rem .0625rem var(--light), -.0625rem .0625rem .0625rem var(--light);
+    background: var(--pink);
+  } 
+  .menu-close, .header-content .menu-open {
+    display: none;
+  }
+  .menu .languages img:hover {
+    outline: .1rem solid var(--light);
+  } 
+ 
+  /* dropdown menu */
+  .menu .submenu {
+    display: block;
+    top: 1.65rem;
+    left: -1rem;
+    width: 12rem;
+    margin-left: -2rem;
+    padding: .3rem;
+    background-color: var(--pink);
+    text-align: center;
+    transition: opacity .7s;
+  }
+  .menu .submenu li:first-child {
+    border-top: 1px solid var(--light);
+    padding-top: .4rem;
+  }
+  .menu .submenu a {
+    line-height: 1;
+    padding: .9rem 2rem;
+  }
+ 
+  /* index page */
+  .home .header-content p, .home .header-content .facebook-home {
+    display: none;
+  }
+  .home .header-content {
+    margin-top: -2rem;
+  }
+  .home .menu {
+    height: auto;
+    margin-top: -1rem;
+    opacity: .9;
+  }
+  .home .home-img {
+    background-position: center;
+  }
+
+  /* apartment page */
+  .facilities, .price-info {
+    columns: 2;
+    grid-gap: 5rem;
+  }
+  .price-info {
+    line-height: 2rem;
+  }
+  .price-list table.studio {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .reservation-policy {
+    padding-bottom: 2rem;
+  }
+  .gallery-img {
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  }
+
+  /* baska */
+  .baska-info img {
+    margin-bottom: 1.5rem;
+  }
+  /* contact */
+  .form {
+    grid-template-columns: 6rem 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  label {
+    margin: 0;
+    grid-column: 1 / 2;
+  }
+  input[type=text], input[type=submit], textarea {
+    grid-column: 2 / 3;
+  }
+  .message {
+    align-self: start;
+  }
+  textarea {
+    margin-bottom: 0;
+  }
+  input[type=submit] {
+    color: var(--light);
+    background: var(--pink);
+    margin-top: 0;
+    padding: .5rem;
+    cursor: pointer;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+  }
+  .contact-info {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-info .address h3 {
+    margin-top: 0;
+  }
+
+  /* footer */
+  footer {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-areas: "address map contact facebook";
+    grid-gap: 0;
+  }
+  footer article {
+    margin: 1.5rem 0 1rem;
+  }
+  footer h3 {
+    margin: 0;
+  }
+  .footer-contact {
+    margin-left: 4rem;
+  }
+}
